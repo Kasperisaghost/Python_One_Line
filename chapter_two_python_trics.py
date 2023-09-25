@@ -1,10 +1,18 @@
 #!/usr/local/bin/python3
-from timeit import timeit
+
+test = '''
+We spend several years building our own database engine,
+Amazon Aurora, a fully-managed MySQL and PostgreSQL-competible
+servise with the same or better durability and availavility as
+the commercial engines, byt at one-tenth of the cost.
+'''
+
+test['turs':'name'] = 'name turs turs name'
+print(test)
 
 
-print(timeit('[(value.strip(), "anonymus" in value) for value in open("test.txt")]', number=10_000))
-print(timeit('map(lambda s: (s, True) if "anonymus" in s else (s, False), open("test.txt"))', number=10_000))
+price = [[9.9, 9.8, 9.8, 9.6, 9.4],
+         [9.5, 9.4, 9.3, 9.3, 9.2]]
 
 
-
-
+print([value[::2] for value in price])
